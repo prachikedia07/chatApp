@@ -1,0 +1,129 @@
+<svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6d5c0" />
+      <stop offset="100%" stop-color="#eac8fa" />
+    </linearGradient>
+    <linearGradient id="purpleCircle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cfa7c8" />
+      <stop offset="100%" stop-color="#b88db5" />
+    </linearGradient>
+    <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6d3c91" />
+      <stop offset="100%" stop-color="#5a2b7a" />
+    </linearGradient>
+    <linearGradient id="peachBubble" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6d5c0" />
+      <stop offset="100%" stop-color="#e7a67c" />
+    </linearGradient>
+    <linearGradient id="coralBubble" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e7a67c" />
+      <stop offset="100%" stop-color="#d27c52" />
+    </linearGradient>
+    <linearGradient id="roseBubble" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f2c1a1" />
+      <stop offset="100%" stop-color="#e7a67c" />
+    </linearGradient>
+    <linearGradient id="lavenderAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eac8fa" />
+      <stop offset="100%" stop-color="#cfa7c8" />
+    </linearGradient>
+    <filter id="softShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="4" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.25"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <circle cx="300" cy="320" r="200" fill="url(#purpleCircle)" filter="url(#softShadow)">
+    <animate attributeName="r" values="200;210;200" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="450" cy="150" r="60" fill="url(#lavenderAccent)" opacity="0.6">
+    <animate attributeName="cy" values="150;145;150" dur="3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="150" cy="380" r="45" fill="url(#peachBubble)" opacity="0.5">
+    <animate attributeName="cy" values="380;375;380" dur="3.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="510" cy="480" r="35" fill="#fdf5f2" opacity="0.6">
+    <animate attributeName="cy" values="480;475;480" dur="3.2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="90" cy="510" r="30" fill="#f8ece8" opacity="0.7">
+    <animate attributeName="cy" values="510;505;510" dur="3.8s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="280" cy="480" r="12" fill="#e7a67c" opacity="0.7">
+    <animate attributeName="r" values="12;14;12" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <g opacity="0.7">
+    <path d="M 130 190 L 136 196 L 130 202 L 124 196 Z" fill="#fdf5f2">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
+    </path>
+    <path d="M 170 200 L 173 203 L 170 206 L 167 203 Z" fill="#e7a67c">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.3s" repeatCount="indefinite" />
+    </path>
+  </g>
+  <rect x="180" y="250" width="10" height="10" fill="#e7a67c" opacity="0.7" rx="2">
+    <animateTransform attributeName="transform" type="rotate" from="0 185 255" to="360 185 255" dur="8s" repeatCount="indefinite" />
+  </rect>
+  <g transform="translate(300, 320)" filter="url(#softShadow)">
+    <rect x="-85" y="-160" width="170" height="320" rx="28" fill="#ffffff" />
+    <rect x="-78" y="-153" width="156" height="306" rx="24" fill="url(#phoneGradient)" />
+    <rect x="-68" y="-138" width="136" height="260" rx="16" fill="#ffffff" />
+    <rect x="-40" y="-128" width="80" height="6" rx="3" fill="#e0e7ff" />
+    <circle cx="-38" cy="-85" r="20" fill="#e7a67c" />
+    <g opacity="0.6">
+      <rect x="-10" y="-95" width="45" height="6" rx="3" fill="#cfa7c8" />
+      <rect x="-10" y="-82" width="55" height="5" rx="2.5" fill="#e8c7e5" />
+      <rect x="-10" y="-72" width="35" height="5" rx="2.5" fill="#e8c7e5" />
+    </g>
+    <rect x="-55" y="-35" width="100" height="60" rx="12" fill="#f3edf8" />
+    <path d="M -55 -5 L -65 5 L -55 15 Z" fill="#f3edf8" />
+    <circle cx="25" cy="50" r="8" fill="#e7a67c" opacity="0.4">
+      <animate attributeName="r" values="8;10;8" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="-30" cy="80" r="10" fill="#cfa7c8" opacity="0.3">
+      <animate attributeName="r" values="10;12;10" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="140" r="10" fill="#ffffff" />
+  </g>
+  <g transform="translate(90, 330)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="150" height="90" rx="18" fill="url(#peachBubble)">
+      <animate attributeName="y" values="0;-8;0" dur="3s" repeatCount="indefinite" />
+    </rect>
+    <path d="M 30 90 L 15 115 L 50 90 Z" fill="url(#peachBubble)">
+      <animate attributeName="d" values="M 30 90 L 15 115 L 50 90 Z;M 30 82 L 15 107 L 50 82 Z;M 30 90 L 15 115 L 50 90 Z" dur="3s" repeatCount="indefinite" />
+    </path>
+    <rect x="18" y="22" width="90" height="7" rx="3.5" fill="white" opacity="0.95" />
+    <rect x="18" y="36" width="110" height="7" rx="3.5" fill="white" opacity="0.95" />
+    <rect x="18" y="50" width="80" height="7" rx="3.5" fill="white" opacity="0.95" />
+    <rect x="18" y="64" width="100" height="7" rx="3.5" fill="white" opacity="0.95" />
+  </g>
+  <g transform="translate(360, 190)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="170" height="95" rx="18" fill="url(#coralBubble)">
+      <animate attributeName="y" values="0;-8;0" dur="3.5s" repeatCount="indefinite" />
+    </rect>
+    <path d="M 140 30 L 175 22 L 140 50 Z" fill="url(#coralBubble)">
+      <animate attributeName="d" values="M 140 30 L 175 22 L 140 50 Z;M 140 22 L 175 14 L 140 42 Z;M 140 30 L 175 22 L 140 50 Z" dur="3.5s" repeatCount="indefinite" />
+    </path>
+    <rect x="18" y="22" width="100" height="7" rx="3.5" fill="white" opacity="0.95" />
+    <rect x="18" y="36" width="130" height="7" rx="3.5" fill="white" opacity="0.95" />
+    <rect x="18" y="50" width="90" height="7" rx="3.5" fill="white" opacity="0.95" />
+    <rect x="18" y="64" width="110" height="7" rx="3.5" fill="white" opacity="0.95" />
+  </g>
+  <g transform="translate(330, 430)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="180" height="95" rx="18" fill="url(#roseBubble)">
+      <animate attributeName="y" values="0;-8;0" dur="3.2s" repeatCount="indefinite" />
+    </rect>
+    <path d="M 70 95 L 80 125 L 100 95 Z" fill="url(#roseBubble)">
+      <animate attributeName="d" values="M 70 95 L 80 125 L 100 95 Z;M 70 87 L 80 117 L 100 87 Z;M 70 95 L 80 125 L 100 95 Z" dur="3.2s" repeatCount="indefinite" />
+    </path>
+    <rect x="18" y="22" width="110" height="7" rx="3.5" fill="white" opacity="0.95" />
+    <rect x="18" y="36" width="140" height="7" rx="3.5" fill="white" opacity="0.95" />
+    <rect x="18" y="50" width="100" height="7" rx="3.5" fill="white" opacity="0.95" />
+    <rect x="18" y="64" width="90" height="7" rx="3.5" fill="white" opacity="0.95" />
+  </g>
+</svg>

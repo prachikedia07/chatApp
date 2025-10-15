@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+* {
+  font-family: "Poppins", sans-serif;
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* 🌞 LIGHT THEME */
+:root {
+  --bg-primary: #f9f4f7;
+  --bg-secondary: #fffaf8;
+  --bg-gradient: linear-gradient(145deg, #fbe7e0, #f1e0f8);
+
+  --accent-1: #c78976; /* soft brown-orange */
+  --accent-2: #a46ec4; /* muted violet-pink */
+
+  --text-primary: #2d1f34;
+  --text-secondary: #6f5a7c;
+  --border: #e5d7e8;
+  --divider: #eadfea;
+  --icon: #49354f;
+
+  --bubble-sent: #f1e0f870;
+  --bubble-recv: #ffffffd8;
+
+  --button-bg: linear-gradient(135deg, #a46ec4, #c78976);
+  --button-hover: linear-gradient(135deg, #b37acb, #d79b7f);
+}
+
+/* 🌑 DARK THEME */
+[data-theme='dark'] {
+  --bg-primary: #18111f;
+  --bg-secondary: #211729;
+  --bg-gradient: linear-gradient(135deg, #291c39, #1c141f);
+
+  --accent-1: #d79b7f;
+  --accent-2: #a774c9;
+
+  --text-primary: #f4ecfa;
+  --text-secondary: #bda9c8;
+  --border: #352843;
+  --divider: #2a1e35;
+  --icon: #dcc3ee;
+
+  --bubble-sent: #a774c930;
+  --bubble-recv: #3a294b70;
+
+  --button-bg: linear-gradient(135deg, #a774c9, #d79b7f);
+  --button-hover: linear-gradient(135deg, #b885d4, #e2aa8f);
+}
+
+/* 🪞 Layout and effects */
+body {
+  background: var(--bg-gradient);
+  color: var(--text-primary);
+}
+
+/* Glassy surfaces */
+.backdrop-glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+}
+
+/* Buttons */
+button,
+.theme-button {
+  background: var(--button-bg);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+button:hover,
+.theme-button:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+/* Avatars */
+img.rounded-full {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Text utilities */
+.text-button {
+  color: var(--text-primary);
+}
+.text-button-two {
+  color: var(--text-secondary);
+}
+

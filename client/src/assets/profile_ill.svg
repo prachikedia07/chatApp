@@ -1,0 +1,171 @@
+<svg viewBox="0 0 800 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgCircle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3d4f0" />
+      <stop offset="100%" stop-color="#e8c7fa" />
+    </linearGradient>
+    <linearGradient id="phoneBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6d3c91" />
+      <stop offset="100%" stop-color="#4a2563" />
+    </linearGradient>
+    <linearGradient id="phoneScreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef9f7" />
+      <stop offset="100%" stop-color="#fdf4f0" />
+    </linearGradient>
+    <linearGradient id="profileCircle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9f7a" />
+      <stop offset="50%" stop-color="#ff8560" />
+      <stop offset="100%" stop-color="#ff7052" />
+    </linearGradient>
+    <linearGradient id="paperPlane" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5a3de8" />
+      <stop offset="100%" stop-color="#7c5dff" />
+    </linearGradient>
+    <linearGradient id="leaf1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4b8f5" />
+      <stop offset="100%" stop-color="#c5a3e8" />
+    </linearGradient>
+    <linearGradient id="leaf2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8d2fa" />
+      <stop offset="100%" stop-color="#d8bcf0" />
+    </linearGradient>
+    <linearGradient id="gearGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c4a5e0" />
+      <stop offset="100%" stop-color="#b08dd5" />
+    </linearGradient>
+    <filter id="softShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="4" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <circle cx="200" cy="200" r="120" fill="url(#bgCircle)" opacity="0.3">
+    <animate attributeName="r" values="120;130;120" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="600" cy="500" r="100" fill="url(#leaf1)" opacity="0.25">
+    <animate attributeName="r" values="100;110;100" dur="4.5s" repeatCount="indefinite" />
+  </circle>
+  <g opacity="0.6">
+    <circle cx="120" cy="250" r="45" fill="url(#leaf1)" filter="url(#softShadow)">
+      <animate attributeName="cy" values="250;245;250" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="90" cy="360" r="35" fill="url(#leaf2)" filter="url(#softShadow)">
+      <animate attributeName="cy" values="360;355;360" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="140" cy="440" r="28" fill="url(#leaf1)" filter="url(#softShadow)" opacity="0.8">
+      <animate attributeName="cy" values="440;435;440" dur="4s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  <g stroke="#b896d1" stroke-width="2.5" stroke-dasharray="10,10" opacity="0.3">
+    <path d="M 190 250 Q 280 280 360 300">
+      <animate attributeName="stroke-dashoffset" from="0" to="20" dur="1.5s" repeatCount="indefinite" />
+    </path>
+    <path d="M 620 200 Q 550 250 480 280">
+      <animate attributeName="stroke-dashoffset" from="0" to="20" dur="1.5s" repeatCount="indefinite" />
+    </path>
+  </g>
+  <g transform="translate(400, 360)" filter="url(#softShadow)">
+    <rect x="-130" y="-220" width="260" height="440" rx="36" fill="url(#phoneBody)" />
+    <rect x="-118" y="-202" width="236" height="404" rx="28" fill="url(#phoneScreen)" />
+    <rect x="-50" y="-192" width="100" height="10" rx="5" fill="#e5d8f0" opacity="0.8" />
+    <g>
+      <circle cx="0" cy="-60" r="85" fill="url(#profileCircle)" filter="url(#glow)">
+        <animate attributeName="r" values="85;88;85" dur="2.5s" repeatCount="indefinite" />
+      </circle>
+      <g fill="white" opacity="0.95">
+        <circle cx="0" cy="-72" r="24" />
+        <path d="M -36 -24 Q 0 -42 36 -24 L 36 0 Q 0 -10 -36 0 Z" />
+      </g>
+    </g>
+    <g opacity="0.5">
+      <rect x="-85" y="50" width="170" height="10" rx="5" fill="#e7a67c" />
+      <rect x="-95" y="72" width="190" height="8" rx="4" fill="#d8b5e0" />
+      <rect x="-75" y="90" width="150" height="8" rx="4" fill="#d8b5e0" />
+    </g>
+    <g opacity="0.4">
+      <circle cx="-85" cy="120" r="6" fill="#c5a3e8" />
+      <circle cx="-85" cy="143" r="6" fill="#c5a3e8" />
+      <circle cx="-85" cy="166" r="6" fill="#c5a3e8" />
+      <rect x="-68" y="116" width="130" height="7" rx="3.5" fill="#e8d2fa" />
+      <rect x="-68" y="139" width="110" height="7" rx="3.5" fill="#e8d2fa" />
+      <rect x="-68" y="162" width="120" height="7" rx="3.5" fill="#e8d2fa" />
+    </g>
+    <rect x="-60" y="185" width="120" height="6" rx="3" fill="#dcc5ed" opacity="0.6" />
+  </g>
+  <g opacity="0.7">
+    <g transform="translate(600, 180)">
+      <circle cx="0" cy="0" r="38" fill="url(#gearGrad)" filter="url(#softShadow)">
+        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="8s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="0" cy="0" r="22" fill="white" opacity="0.9" />
+      <circle cx="0" cy="0" r="11" fill="url(#gearGrad)" />
+      <rect x="-5" y="-41" width="10" height="9" rx="2" fill="url(#gearGrad)" />
+      <rect x="-5" y="32" width="10" height="9" rx="2" fill="url(#gearGrad)" />
+      <rect x="-41" y="-5" width="9" height="10" rx="2" fill="url(#gearGrad)" />
+      <rect x="32" y="-5" width="9" height="10" rx="2" fill="url(#gearGrad)" />
+      <rect x="-30" y="-30" width="9" height="9" rx="2" fill="url(#gearGrad)" transform="rotate(45 -30 -30)" />
+      <rect x="25" y="-30" width="9" height="9" rx="2" fill="url(#gearGrad)" transform="rotate(-45 25 -30)" />
+      <rect x="-30" y="25" width="9" height="9" rx="2" fill="url(#gearGrad)" transform="rotate(-45 -30 25)" />
+      <rect x="25" y="25" width="9" height="9" rx="2" fill="url(#gearGrad)" transform="rotate(45 25 25)" />
+    </g>
+    <g transform="translate(690, 130)">
+      <circle cx="0" cy="0" r="30" fill="url(#gearGrad)" filter="url(#softShadow)">
+        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="6s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="0" cy="0" r="18" fill="white" opacity="0.9" />
+      <circle cx="0" cy="0" r="9" fill="url(#gearGrad)" />
+      <rect x="-4" y="-33" width="8" height="7" rx="2" fill="url(#gearGrad)" />
+      <rect x="-4" y="26" width="8" height="7" rx="2" fill="url(#gearGrad)" />
+      <rect x="-33" y="-4" width="7" height="8" rx="2" fill="url(#gearGrad)" />
+      <rect x="26" y="-4" width="7" height="8" rx="2" fill="url(#gearGrad)" />
+    </g>
+  </g>
+  <g transform="translate(610, 380)" filter="url(#softShadow)">
+    <g transform="rotate(-25)">
+      <path d="M 0 0 L -18 60 L 6 48 L 30 60 Z" fill="url(#paperPlane)">
+        <animate attributeName="d" values="M 0 0 L -18 60 L 6 48 L 30 60 Z;M 0 -6 L -18 54 L 6 42 L 30 54 Z;M 0 0 L -18 60 L 6 48 L 30 60 Z" dur="2s" repeatCount="indefinite" />
+      </path>
+      <path d="M 0 0 L 6 48 L 30 60 Z" fill="#4a2de0" opacity="0.6" />
+      <circle cx="10" cy="50" r="4" fill="white" opacity="0.7" />
+    </g>
+  </g>
+  <g opacity="0.6">
+    <circle cx="250" cy="150" r="8" fill="#ff9f7a">
+      <animate attributeName="cy" values="150;145;150" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="620" cy="420" r="10" fill="#d8b5e0">
+      <animate attributeName="cy" values="420;415;420" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="180" cy="500" r="6" fill="#ffc7ab">
+      <animate attributeName="cy" values="500;495;500" dur="3.2s" repeatCount="indefinite" />
+    </circle>
+    <path d="M 300 520 L 306 526 L 300 532 L 294 526 Z" fill="#ff8560">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite" />
+    </path>
+    <path d="M 650 320 L 655 325 L 650 330 L 645 325 Z" fill="#c5a3e8">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite" />
+    </path>
+    <path d="M 220 600 L 224 604 L 220 608 L 216 604 Z" fill="#d8b5e0">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.2s" repeatCount="indefinite" />
+    </path>
+  </g>
+  <g transform="translate(550, 260)" opacity="0.8">
+    <circle cx="0" cy="0" r="26" fill="#ff7052" filter="url(#softShadow)">
+      <animate attributeName="r" values="26;28;26" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <path d="M 0 -14 L 0 14 M -14 0 L 14 0" stroke="white" stroke-width="4" stroke-linecap="round" />
+  </g>
+</svg>

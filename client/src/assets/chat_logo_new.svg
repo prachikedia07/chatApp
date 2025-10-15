@@ -1,0 +1,39 @@
+<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="peachGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6d5c0" />
+      <stop offset="100%" stop-color="#e7a67c" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eac8fa" />
+      <stop offset="100%" stop-color="#cfa7c8" />
+    </linearGradient>
+    <linearGradient id="darkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6d3c91" />
+      <stop offset="100%" stop-color="#3a2b42" />
+    </linearGradient>
+    <filter id="softShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="20" y="60" width="110" height="80" rx="40" fill="url(#peachGrad)" filter="url(#softShadow)">
+    <animate attributeName="y" values="60;55;60" dur="3s" repeatCount="indefinite" />
+  </rect>
+  <rect x="70" y="40" width="110" height="80" rx="40" fill="url(#purpleGrad)" filter="url(#softShadow)">
+    <animate attributeName="y" values="40;35;40" dur="3s" begin="0.5s" repeatCount="indefinite" />
+  </rect>
+  <rect x="45" y="80" width="110" height="80" rx="40" fill="url(#darkGrad)" filter="url(#softShadow)">
+    <animate attributeName="y" values="80;75;80" dur="3s" begin="1s" repeatCount="indefinite" />
+  </rect>
+  <path d="M 40 140 L 30 155 L 50 145 Z" fill="url(#peachGrad)" filter="url(#softShadow)">
+    <animate attributeName="d" values="M 40 140 L 30 155 L 50 145 Z;M 40 135 L 30 150 L 50 140 Z;M 40 140 L 30 155 L 50 145 Z" dur="3s" repeatCount="indefinite" />
+  </path>
+</svg>
