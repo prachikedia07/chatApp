@@ -18,7 +18,7 @@ const server = http.createServer(app);
 
 export const io = new Server(server, {
     cors: {
-        origin: ["https://chat-app-neon-ten-95.vercel.app/"], // 🔹 your frontend Vercel URL here
+        origin: ["https://chat-app-neon-ten-95.vercel.app"], // 🔹 your frontend Vercel URL here
         methods: ["GET", "POST"],
         credentials: true
     }
@@ -82,7 +82,7 @@ io.on("connection", (socket) => {
 app.use(express.json({limit: "4mb"}));
 // app.use(cors()); 
 app.use(cors({
-    origin: ["https://chat-app-frontend.vercel.app"],
+    origin: ["https://chat-app-neon-ten-95.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
