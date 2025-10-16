@@ -19,22 +19,52 @@ export const io = new Server(server, {
 //store online users
 export const userSocketMap = {}; //userId: socketId
 
+// //socket.io connection handler
+// io.on("connection", (socket)=>{
+//     const userId = socket.handshake.query.userId;
+//     console.log("User Connected", userId);
+
+//     if(userId) userSocketMap[userId] = socket.id;
+
+//     //emit online users to all connected clients
+//     io.emit("getOnlineUsers", Object.keys(userSocketMap));
+
+//     socket.on("disconnect", ()=>{
+//         console.log("User Disconnected", userId);
+//         delete userSocketMap[userId];
+//         io.emit("getOnlineUsers", Object.keys(userSocketMap))
+//     })
+// })
+
 //socket.io connection handler
-io.on("connection", (socket)=>{
-    const userId = socket.handshake.query.userId;
-    console.log("User Connected", userId);
+io.on("connection", (socket) => {
+  const userId = socket.handshake.query.userId;
+  console.log("🟢 User Connected:", userId, "Socket:", socket.id);
 
-    if(userId) userSocketMap[userId] = socket.id;
-
-    //emit online users to all connected clients
+  if (userId) {
+    userSocketMap[userId] = socket.id;
+    // Broadcast updated online users list
     io.emit("getOnlineUsers", Object.keys(userSocketMap));
+  }
 
-    socket.on("disconnect", ()=>{
-        console.log("User Disconnected", userId);
-        delete userSocketMap[userId];
-        io.emit("getOnlineUsers", Object.keys(userSocketMap))
-    })
-})
+  socket.on("disconnect", (reason) => {
+    console.log("🔴 User Disconnected:", userId, "Reason:", reason);
+    if (userId && userSocketMap[userId] === socket.id) {
+      delete userSocketMap[userId];
+      io.emit("getOnlineUsers", Object.keys(userSocketMap));
+    }
+  });
+
+  // Optional: explicit logout from frontend
+  socket.on("manualLogout", () => {
+    if (userId && userSocketMap[userId]) {
+      delete userSocketMap[userId];
+      io.emit("getOnlineUsers", Object.keys(userSocketMap));
+      console.log("👋 Manual logout from:", userId);
+    }
+  });
+});
+
 
 
 

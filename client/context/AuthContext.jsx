@@ -50,15 +50,30 @@ const login = async (state, credentials)=>{
 
 //logout function to handle user logout and socket disconnection
 
-const logout = async ()=>{
-    localStorage.removeItem("token");
-    setToken(null);
-    setAuthUser(null);
-    setOnlineUsers([]);
-    axios.defaults.headers.common["token"] = null;
-    toast.success("Logged out successfully")
+// const logout = async ()=>{
+//     localStorage.removeItem("token");
+//     setToken(null);
+//     setAuthUser(null);
+//     setOnlineUsers([]);
+//     axios.defaults.headers.common["token"] = null;
+//     toast.success("Logged out successfully")
+//     socket.disconnect();
+// }
+
+const logout = async () => {
+  if (socket) {
+    socket.emit("manualLogout"); // 👈 tell backend immediately
     socket.disconnect();
-}
+    setSocket(null);
+  }
+  localStorage.removeItem("token");
+  setToken(null);
+  setAuthUser(null);
+  setOnlineUsers([]);
+  axios.defaults.headers.common["token"] = null;
+  toast.success("Logged out successfully");
+};
+
 
 //update profile fucntion to handle user profile updates
 const updateProfile = async (body)=>{
@@ -75,21 +90,50 @@ const updateProfile = async (body)=>{
     }
 }
 
-//connect socket function to handle socket connection and online users updates  
-const connectSocket = (userData)=>{
-    if(!userData) return;
-    const newSocket = io(backendUrl,{
-        query: {
-            userId: userData._id,
-        }
-    });
-    newSocket.connect();
-    setSocket(newSocket);
+// //connect socket function to handle socket connection and online users updates  
+// const connectSocket = (userData)=>{
+//     if(!userData) return;
+//     const newSocket = io(backendUrl,{
+//         query: {
+//             userId: userData._id,
+//         }
+//     });
+//     newSocket.connect();
+//     setSocket(newSocket);
 
-    newSocket.on("getOnlineUsers", (userIds)=>{
-        setOnlineUsers(userIds);
-    })
-}
+//     newSocket.on("getOnlineUsers", (userIds)=>{
+//         setOnlineUsers(userIds);
+//     })
+// }
+
+// connect socket function to handle socket connection and online users updates  
+const connectSocket = (userData) => {
+  if (!userData) return;
+
+  // avoid duplicate sockets
+  if (socket?.connected) return;
+
+  const newSocket = io(backendUrl, {
+    query: { userId: userData._id },
+    transports: ["websocket"], // ensures stable connection
+    reconnection: true,
+  });
+
+  setSocket(newSocket);
+
+  newSocket.on("connect", () => {
+    console.log("✅ Socket connected:", newSocket.id);
+  });
+
+  newSocket.on("disconnect", (reason) => {
+    console.log("⚠️ Socket disconnected:", reason);
+  });
+
+  newSocket.on("getOnlineUsers", (userIds) => {
+    setOnlineUsers(userIds);
+  });
+};
+
 
 useEffect(()=>{
 if(token){
