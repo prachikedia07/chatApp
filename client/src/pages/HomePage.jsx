@@ -42,7 +42,9 @@ useEffect(() => {
 
         {/* RIGHT SIDEBAR */}
         {selectedUser && 
-        <RightSidebar isSidebarOpen={isSidebarOpen} />}
+        <RightSidebar 
+        isSidebarOpen={isSidebarOpen}
+         setIsSidebarOpen={setIsSidebarOpen}  />}
       </div>
     </div>
   );
