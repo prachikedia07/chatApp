@@ -12,9 +12,18 @@ const app = express();
 const server = http.createServer(app);
 
 //initialize socket.io server
+// export const io = new Server(server, {
+//     cors: {origin: "*"} 
+// })
+
 export const io = new Server(server, {
-    cors: {origin: "*"} 
-})
+    cors: {
+        origin: ["https://chat-app-neon-ten-95.vercel.app/"], // 🔹 your frontend Vercel URL here
+        methods: ["GET", "POST"],
+        credentials: true
+    }
+});
+
 
 //store online users
 export const userSocketMap = {}; //userId: socketId
@@ -71,7 +80,12 @@ io.on("connection", (socket) => {
 
 //middleware setup
 app.use(express.json({limit: "4mb"}));
-app.use(cors()); 
+// app.use(cors()); 
+app.use(cors({
+    origin: ["https://chat-app-frontend.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 
 //Routes setup
 app.use("/api/status", (req, res) => res.send("Server is running"));
