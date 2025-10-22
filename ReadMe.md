@@ -52,27 +52,29 @@ A full-stack **real-time chat platform** built using **React**, **Node.js**, **E
 ![Login Page](images/login.png)
 
 ### 💬 Chat Interface
-![Chat Interface](assets/chat.png)
+![Chat Interface](images/chat.png)
 
 ### 📱 Mobile Responsive Layout
-![Mobile View](assets/mobile.png)
+![Mobile View](images/mobile.png)
 
-
+---
 
 ## 🏆 Key Highlights
 
-Focused on real-time UX and responsive mobile-first design.
-Integrated Cloudinary for seamless image uploads.
-Utilized MongoDB for robust and scalable data storage.
-Designed clean reusable React components and state management.
-Optimized for deployment on free-tier cloud services.
+- Focused on real-time UX and responsive mobile-first design.
+- Integrated Cloudinary for seamless image uploads.
+- Utilized MongoDB for robust and scalable data storage.
+- Designed clean reusable React components and state management.
+- Optimized for deployment on free-tier cloud services.
+
+---
 
 ## 👩‍💻 Developer
 
 Prachi Kedia
-🎓 2nd-year Mechanical Engineering, NIT Durgapur
-💡 Web Developer | DSA Enthusiast
+# 🎓 2nd-year Mechanical Engineering, NIT Durgapur
+# 💡 Web Developer | DSA Enthusiast
 
-This project marks the beginning of my journey in full-stack development. I aim to build more advanced and scalable applications, focusing on clean architecture, performance, and user experience. QuickChat serves as a strong foundation for upcoming projects in my portfolio.
+- This project marks the beginning of my journey in full-stack development. I aim to build more advanced and scalable applications, focusing on clean architecture, performance, and user experience. QuickChat serves as a strong foundation for upcoming projects in my portfolio.
 
 ⭐ If you like this project, give it a star on GitHub!
