@@ -71,9 +71,9 @@ A full-stack **real-time chat platform** built using **React**, **Node.js**, **E
 
 ## 👩‍💻 Developer
 
-Prachi Kedia
-# 🎓 2nd-year Mechanical Engineering, NIT Durgapur
-# 💡 Web Developer | DSA Enthusiast
+### Prachi Kedia
+ - 🎓 2nd-year Mechanical Engineering, NIT Durgapur
+ - 💡 Web Developer | DSA Enthusiast
 
 - This project marks the beginning of my journey in full-stack development. I aim to build more advanced and scalable applications, focusing on clean architecture, performance, and user experience. QuickChat serves as a strong foundation for upcoming projects in my portfolio.
 
